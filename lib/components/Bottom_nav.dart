@@ -18,14 +18,23 @@ class _MyBottomNavState extends State<MyBottomNav> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: val,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: "News"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_filled),
+              label: "Home",
+              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.newspaper),
+              label: "News",
+              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
           BottomNavigationBarItem(
               icon: Transform.rotate(
                   angle: -30 * pi / 180, child: Icon(Icons.sports)),
-              label: "Matches"),
+              label: "Matches",
+              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.table_chart_outlined), label: "Standings"),
+              icon: Icon(Icons.table_chart_outlined),
+              label: "Standings",
+              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
         ],
         selectedItemColor: Colors.purple,
         unselectedItemColor: Colors.grey,

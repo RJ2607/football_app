@@ -13,6 +13,10 @@ int val = 0;
 class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(bottomNavigationBar: MyBottomNav());
+    return Scaffold(
+        bottomNavigationBar: MyBottomNav(),
+        body: Row(
+          children: [Text("data", style: TextStyle(color: Colors.white))],
+        ));
   }
 }
