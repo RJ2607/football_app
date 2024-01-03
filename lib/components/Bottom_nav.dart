@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -39,13 +41,13 @@ class _MyBottomNavState extends State<MyBottomNav> {
               label: "Home",
               backgroundColor: Color.fromARGB(255, 22, 22, 22)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.newspaper),
-              label: "News",
-              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
-          BottomNavigationBarItem(
               icon: Transform.rotate(
                   angle: -30 * pi / 180, child: Icon(Icons.sports)),
               label: "Matches",
+              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.newspaper),
+              label: "News",
               backgroundColor: Color.fromARGB(255, 22, 22, 22)),
           BottomNavigationBarItem(
               icon: Icon(Icons.table_chart_outlined),
