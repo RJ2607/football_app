@@ -1,6 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:football_app/screens/HomePage.dart';
+import 'package:football_app/screens/Matches.dart';
+import 'package:football_app/screens/News.dart';
+import 'package:football_app/screens/Standings.dart';
 
 class MyBottomNav extends StatefulWidget {
   const MyBottomNav({super.key});
@@ -9,15 +13,27 @@ class MyBottomNav extends StatefulWidget {
   State<MyBottomNav> createState() => _MyBottomNavState();
 }
 
-int val = 0;
-
 class _MyBottomNavState extends State<MyBottomNav> {
+  int val = 0;
+  static const List<Widget> _widgetOptions = <Widget>[
+    MyHome(),
+    News(),
+    Matches(),
+    Standings()
+  ];
+  void _onItemTapped(int index) {
+    setState(() {
+      val = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: _widgetOptions.elementAt(val),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: val,
-        items: [
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home_filled),
               label: "Home",
@@ -38,11 +54,7 @@ class _MyBottomNavState extends State<MyBottomNav> {
         ],
         selectedItemColor: Colors.purple,
         unselectedItemColor: Colors.grey,
-        onTap: (index) {
-          setState(() {
-            val = index;
-          });
-        },
+        onTap: _onItemTapped,
       ),
     );
   }

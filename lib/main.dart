@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:football_app/screens/HomePage.dart';
+import 'package:football_app/components/Bottom_nav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 1, 5, 41),
+        scaffoldBackgroundColor: Color.fromARGB(255, 18, 19, 35),
       ),
       title: 'Flutter Demo',
-      home: MyHome(),
+      home: MyBottomNav(),
     );
   }
 }
