@@ -1,19 +1,22 @@
 class TeamModel {
   final int id;
-  final String abbreviation;
-  final String city;
+  final String code;
+  final String name;
+  final String logo;
 
   TeamModel({
     required this.id,
-    required this.abbreviation,
-    required this.city,
+    required this.code,
+    required this.name,
+    required this.logo
   });
 
   factory TeamModel.fromJson(Map<String, dynamic> json) {
     return TeamModel(
       id: json['id'],
-      abbreviation: json['abbreviation'],
-      city: json['city'],
+      code: json['code'],
+      name: json['name'],
+      logo: json['logo']
     );
   }
 }
