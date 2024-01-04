@@ -55,52 +55,55 @@ class _MyHomeState extends State<MyHome> {
             SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 13),
-              child: Container(
-                height: 200,
-                width: 400,
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 15, left: 20, right: 20, bottom: 15),
-                  child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 28,
-                        width: 105,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Center(
-                            child: Text(
-                          "⚽ Top News",
-                          style: TextStyle(fontWeight: FontWeight.w700),
-                        )),
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        "ldsvvcjshvchjshcshjcjhsvhjhdvjhsvjchvsjvcdshjsvcjhsdcjscjsc",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 25,
-                            fontWeight: FontWeight.w600),
-                      )
-                    ],
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 13),
+                child: Container(
+                  height: 200,
+                  width: 400,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 15, left: 20, right: 20, bottom: 15),
+                    child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 28,
+                          width: 105,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Center(
+                              child: Text(
+                            "⚽ Top News",
+                            style: TextStyle(fontWeight: FontWeight.w700),
+                          )),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "ldsvvcjshvchjshcshjcjhsvhjhdvjhsvjchvsjvcdshjsvcjhsdcjscjsc",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 25,
+                              fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
                   ),
+                  decoration: BoxDecoration(
+                      // color: Colors.red,
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: <Color>[
+                            Color.fromARGB(255, 118, 102, 237),
+                            Color.fromARGB(255, 13, 0, 188)
+                          ]),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(15)),
                 ),
-                decoration: BoxDecoration(
-                    // color: Colors.red,
-                    gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: <Color>[
-                          Color.fromARGB(255, 118, 102, 237),
-                          Color.fromARGB(255, 13, 0, 188)
-                        ]),
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(15)),
               ),
             ),
             SizedBox(
@@ -138,90 +141,10 @@ class _MyHomeState extends State<MyHome> {
                         color: Color.fromARGB(119, 83, 78, 78),
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
-                      child: Text(
-                        "Arsenal",
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    height: 85,
-                    width: 85,
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(119, 83, 78, 78),
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Center(
-                      child: Text(
-                        "Arsenal",
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    height: 85,
-                    width: 85,
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(119, 83, 78, 78),
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Center(
-                      child: Text(
-                        "Arsenal",
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    height: 85,
-                    width: 85,
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(119, 83, 78, 78),
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Center(
-                      child: Text(
-                        "Arsenal",
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    height: 85,
-                    width: 85,
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(119, 83, 78, 78),
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Center(
-                      child: Text(
-                        "Arsenal",
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
+                        child: Image.network(
+                      'https://media.api-sports.io/football/teams/541.png',
+                      height: 60,
+                    )),
                   ),
                 ],
               ),
