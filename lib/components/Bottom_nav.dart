@@ -19,8 +19,8 @@ class _MyBottomNavState extends State<MyBottomNav> {
   int val = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     MyHome(),
-    News(),
     Matches(),
+    News(),
     Standings()
   ];
   void _onItemTapped(int index) {
