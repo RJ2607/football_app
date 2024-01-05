@@ -2,6 +2,7 @@
 
 import 'dart:math';
 
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/screens/HomePage.dart';
 import 'package:football_app/screens/Matches.dart';
@@ -33,29 +34,31 @@ class _MyBottomNavState extends State<MyBottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _widgetOptions.elementAt(val),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: val,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_filled),
-              label: "Home",
-              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
-          BottomNavigationBarItem(
-              icon: Transform.rotate(
-                  angle: -30 * pi / 180, child: Icon(Icons.sports)),
-              label: "Matches",
-              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.newspaper),
-              label: "News",
-              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.table_chart_outlined),
-              label: "Standings",
-              backgroundColor: Color.fromARGB(255, 22, 22, 22)),
+      bottomNavigationBar: CurvedNavigationBar(
+        items: [
+          Icon(
+            Icons.home_filled,
+            color: Color.fromARGB(255, 69, 214, 25),
+          ),
+          Transform.rotate(
+              angle: -30 * pi / 180,
+              child: Icon(
+                Icons.sports,
+                color: Color.fromARGB(255, 69, 214, 25),
+              )),
+          Icon(
+            Icons.newspaper,
+            color: Color.fromARGB(255, 69, 214, 25),
+          ),
+          Icon(
+            Icons.table_chart_outlined,
+            color: Color.fromARGB(255, 69, 214, 25),
+          ),
         ],
-        selectedItemColor: Colors.purple,
-        unselectedItemColor: Colors.grey,
+        animationDuration: Duration(milliseconds: 540),
+        height: 50,
+        color: Colors.black,
+        backgroundColor: Color.fromARGB(255, 32, 34, 56),
         onTap: _onItemTapped,
       ),
     );
