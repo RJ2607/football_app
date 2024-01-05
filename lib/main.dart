@@ -14,9 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 18, 19, 35),
+        scaffoldBackgroundColor: Color.fromARGB(255, 32, 34, 56),
       ),
-      title: 'Flutter Demo',
       home: MyBottomNav(),
     );
   }
