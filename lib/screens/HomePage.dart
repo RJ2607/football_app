@@ -57,7 +57,7 @@ class _MyHomeState extends State<MyHome> {
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: 8,
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 13),
@@ -108,7 +108,7 @@ class _MyHomeState extends State<MyHome> {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 8,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -129,11 +129,11 @@ class _MyHomeState extends State<MyHome> {
                 ],
               ),
               SizedBox(
-                height: 12,
+                height: 8,
               ),
               popularTeams(),
               SizedBox(
-                height: 12,
+                height: 8,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -158,11 +158,11 @@ class _MyHomeState extends State<MyHome> {
                 ],
               ),
               SizedBox(
-                height: 12,
+                height: 8,
               ),
               upcomingMatches(),
               SizedBox(
-                height: 12,
+                height: 8,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -186,9 +186,83 @@ class _MyHomeState extends State<MyHome> {
                   )
                 ],
               ),
+              SizedBox(
+                height: 8,
+              ),
+              latestNews(context),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  SingleChildScrollView latestNews(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          SizedBox(
+            width: 1 * MediaQuery.of(context).size.width,
+            child: Row(children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(7),
+                child: Image(
+                  fit: BoxFit.cover,
+                  height: 100,
+                  width: 150,
+                  image: AssetImage(
+                      'assets/images/cristiano-ronaldo-portugal-s-1704345211.jpg'),
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Container(
+                alignment: Alignment.topLeft,
+                height: 100,
+                width: 0.55 * MediaQuery.of(context).size.width,
+                child: Text(
+                  "Cristiano Ronaldo top scorer in the world",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
+                ),
+              )
+            ]),
+          ),
+          SizedBox(
+            width: 1 * MediaQuery.of(context).size.width,
+            child: Row(children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(7),
+                child: Image(
+                  fit: BoxFit.cover,
+                  height: 100,
+                  width: 150,
+                  image: AssetImage(
+                      'assets/images/cristiano-ronaldo-portugal-s-1704345211.jpg'),
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Container(
+                alignment: Alignment.topLeft,
+                height: 100,
+                width: 0.55 * MediaQuery.of(context).size.width,
+                child: Text(
+                  "Cristiano Ronaldo top scorer in the world",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
+                ),
+              )
+            ]),
+          )
+        ],
       ),
     );
   }
@@ -271,21 +345,21 @@ class _MyHomeState extends State<MyHome> {
                       "Real Madrid",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
                       "VS",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
+                          fontSize: 11,
+                          fontWeight: FontWeight.w400),
                     ),
                     Text(
                       "FC Barcelona",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500),
                     )
                   ],
