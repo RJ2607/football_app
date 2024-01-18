@@ -34,6 +34,7 @@ class _MyBottomNavState extends State<MyBottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _widgetOptions.elementAt(val),
+      extendBody: true,
       bottomNavigationBar: CurvedNavigationBar(
         items: [
           Icon(
@@ -58,7 +59,7 @@ class _MyBottomNavState extends State<MyBottomNav> {
         animationDuration: Duration(milliseconds: 540),
         height: 50,
         color: Colors.black,
-        backgroundColor: Color.fromARGB(255, 32, 34, 56),
+        backgroundColor: Colors.transparent,
         onTap: _onItemTapped,
       ),
     );
