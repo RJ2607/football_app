@@ -3,10 +3,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:football_app/Api%20manger/team%20data/standing_model.dart';
 import 'package:football_app/Api/api_function.dart';
+import 'package:football_app/components/appBar.dart';
 import 'package:football_app/screens/Matches.dart';
-import 'package:football_app/screens/News.dart';
+import 'package:football_app/screens/Transfers.dart';
 
 // import '../components/Bottom_nav.dart';
 
@@ -20,10 +20,9 @@ class MyHome extends StatefulWidget {
 int val = 0;
 
 class _MyHomeState extends State<MyHome> {
-  List<StandingsModel> data = [];
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar('Home'),
       body: Padding(
         padding: const EdgeInsets.only(left: 16),
         child: FutureBuilder(
@@ -35,38 +34,38 @@ class _MyHomeState extends State<MyHome> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 0.05 * MediaQuery.of(context).size.height,
+                      height: 0.01 * MediaQuery.of(context).size.height,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Home",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500)),
-                        Row(
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.search),
-                              iconSize: 30,
-                              color: Colors.grey,
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.settings),
-                              iconSize: 30,
-                              color: Colors.grey,
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //   children: [
+                    //     Text("Home",
+                    //         style: TextStyle(
+                    //             color: Colors.white,
+                    //             fontSize: 30,
+                    //             fontFamily: 'Poppins',
+                    //             fontWeight: FontWeight.w500)),
+                    //     Row(
+                    //       children: [
+                    //         IconButton(
+                    //           onPressed: () {},
+                    //           icon: Icon(Icons.search),
+                    //           iconSize: 30,
+                    //           color: Colors.grey,
+                    //         ),
+                    //         IconButton(
+                    //           onPressed: () {},
+                    //           icon: Icon(Icons.settings),
+                    //           iconSize: 30,
+                    //           color: Colors.grey,
+                    //         )
+                    //       ],
+                    //     ),
+                    //   ],
+                    // ),
+                    // SizedBox(
+                    //   height: 8,
+                    // ),
                     Padding(
                       padding: const EdgeInsets.only(right: 13),
                       child: Container(
@@ -190,7 +189,7 @@ class _MyHomeState extends State<MyHome> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => News()));
+                                    builder: (context) => Transfers()));
                           },
                           child: Text(
                             "VIEW ALL",
@@ -202,7 +201,7 @@ class _MyHomeState extends State<MyHome> {
                     SizedBox(
                       height: 8,
                     ),
-                    latestNews(context),
+                    latestTransfers(context),
                     SizedBox(
                       height: 55,
                     ),
@@ -214,7 +213,7 @@ class _MyHomeState extends State<MyHome> {
     );
   }
 
-  SingleChildScrollView latestNews(BuildContext context) {
+  SingleChildScrollView latestTransfers(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -289,7 +288,7 @@ class _MyHomeState extends State<MyHome> {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: List.generate(
-            20,
+            0,
             (i) => Container(
               height: 85,
               width: 85,

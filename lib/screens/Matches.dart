@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:football_app/components/appBar.dart';
 
 class Matches extends StatefulWidget {
   const Matches({super.key});
@@ -11,43 +12,17 @@ class _MatchesState extends State<Matches> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: appBar('Fixtures'),
         // bottomNavigationBar: MyBottomNav(),
         body: Padding(
-      padding: const EdgeInsets.only(left: 16),
-      child: Column(
-        children: [
-          SizedBox(
-            height: 0.05 * MediaQuery.of(context).size.height,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          padding: const EdgeInsets.only(left: 16),
+          child: Column(
             children: [
-              Text("Matches",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w500)),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.search),
-                    iconSize: 30,
-                    color: Colors.grey,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.notifications),
-                    iconSize: 30,
-                    color: Colors.grey,
-                  )
-                ],
+              SizedBox(
+                height: 0.01 * MediaQuery.of(context).size.height,
               ),
             ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 }

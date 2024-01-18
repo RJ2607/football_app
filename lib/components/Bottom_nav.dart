@@ -6,7 +6,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/screens/HomePage.dart';
 import 'package:football_app/screens/Matches.dart';
-import 'package:football_app/screens/News.dart';
+import 'package:football_app/screens/Transfers.dart';
 import 'package:football_app/screens/Standings.dart';
 
 class MyBottomNav extends StatefulWidget {
@@ -21,7 +21,7 @@ class _MyBottomNavState extends State<MyBottomNav> {
   static const List<Widget> _widgetOptions = <Widget>[
     MyHome(),
     Matches(),
-    News(),
+    Transfers(),
     Standings()
   ];
   void _onItemTapped(int index) {
