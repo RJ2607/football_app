@@ -5,14 +5,12 @@ import 'package:http/http.dart' as http;
 class ApiFunction {
   Future<Map<String, dynamic>> standingsDatabyidApi(String id) async {
     var headers = {
-      'x-rapidapi-host': 'v3.football.api-sports.io',
+      'x-rapidapi-host': 'footapi7.p.rapidapi.com',
       'x-rapidapi-key':
-          'c8964bcd76b89bf9276e0d3a7c8fa9ac' //'d0efa14cef0dffff3d72504c72d5ccef'
+          '22e929515bmsh4e0e8c7a5e2dac6p1af659jsna3ebf29d1236' //'d0efa14cef0dffff3d72504c72d5ccef'
     };
     var request = http.Request(
-        'GET',
-        Uri.parse(
-            'https://v3.football.api-sports.io/standings?season=2023&league=$id'));
+        'GET', Uri.parse('https://footapi7.p.rapidapi.com/api/search/team'));
     request.body = '''''';
     request.headers.addAll(headers);
 

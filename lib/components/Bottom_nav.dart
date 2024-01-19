@@ -6,8 +6,8 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/screens/HomePage.dart';
 import 'package:football_app/screens/Matches.dart';
-import 'package:football_app/screens/Transfers.dart';
 import 'package:football_app/screens/Standings.dart';
+import 'package:football_app/screens/Transfers.dart';
 
 class MyBottomNav extends StatefulWidget {
   const MyBottomNav({super.key});
@@ -58,7 +58,7 @@ class _MyBottomNavState extends State<MyBottomNav> {
         ],
         animationDuration: Duration(milliseconds: 540),
         height: 50,
-        color: Colors.black,
+        color: Color.fromARGB(255, 0, 0, 0),
         backgroundColor: Colors.transparent,
         onTap: _onItemTapped,
       ),

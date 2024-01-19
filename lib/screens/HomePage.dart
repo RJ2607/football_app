@@ -288,7 +288,7 @@ class _MyHomeState extends State<MyHome> {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: List.generate(
-            0,
+            1,
             (i) => Container(
               height: 85,
               width: 85,
@@ -302,11 +302,13 @@ class _MyHomeState extends State<MyHome> {
                         if (!snapshot.hasData) {
                           return CircularProgressIndicator();
                         }
-                        return Image.network(
-                          snapshot.data!['response'][0]['league']['standings']
-                              [0][i]['team']['logo'],
-                          height: 60,
+                        return CircularProgressIndicator(
+                          color: Colors.white,
                         );
+                        // Image.network(
+                        //   snapshot.data!['response']['team']['logo'],
+                        //   height: 60,
+                        // );
                       })),
             ),
           ),
